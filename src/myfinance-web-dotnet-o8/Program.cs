@@ -1,7 +1,18 @@
+using myfinance_web_dotnet_o8.Infrastructure;
+using myfinance_web_dotnet_o8.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<MyFinanceDbContext>();
+
+builder.Services.AddScoped<IPlanoContaService, PlanoContaService>();
+builder.Services.AddRouting(options =>
+{
+    options.LowercaseUrls = true;
+    options.LowercaseQueryStrings = true;
+});
 
 var app = builder.Build();
 

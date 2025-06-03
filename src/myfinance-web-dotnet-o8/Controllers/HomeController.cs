@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using myfinance_web_dotnet_o8.Infrastructure;
 using myfinance_web_dotnet_o8.Models;
 
 namespace myfinance_web_dotnet_o8.Controllers;
@@ -7,14 +8,18 @@ namespace myfinance_web_dotnet_o8.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly MyFinanceDbContext _dbContext;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, MyFinanceDbContext dbContext)
     {
         _logger = logger;
+        _dbContext = dbContext;
     }
 
     public IActionResult Index()
     {
+        var nomePrimeroPlanoConta = _dbContext.PlanoConta.FirstOrDefault()?.Nome;
+        ViewBag.Teste = nomePrimeroPlanoConta ?? "Nenhum plano de conta encontrado";
         return View();
     }
 
