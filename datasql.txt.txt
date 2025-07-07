@@ -1,0 +1,6 @@
+FAZER C1 e C2 diagrama c4 modulare api
+
+atualizar portfolio!!! e cv nele
+
+pub ou sobre JWT - ou config postgresSql e dbcontext e connectionString LinkedIn
+
