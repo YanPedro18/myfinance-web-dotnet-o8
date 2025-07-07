@@ -1,6 +1,6 @@
 # MyFinance Web App
 
-Este é um aplicativo web para gerenciamento financeiro pessoal, desenvolvido com .NET 8 e ASP.NET Core. Ele permite aos usuários acompanhar suas transações, gerenciar planos de conta e ter uma visão clara de suas finanças.
+Este é um aplicativo web para gerenciamento financeiro pessoal, desenvolvido com .NET 9 e ASP.NET Core. Ele permite aos usuários acompanhar suas transações, gerenciar planos de conta e ter uma visão clara de suas finanças.
 
 ## Descrição do Projeto
 
@@ -33,7 +33,7 @@ O projeto adota uma arquitetura em **N-Camadas (N-Tiered Architecture)**, com um
 ## Tecnologias
 
 * **Backend:**
-    * .NET 8
+    * .NET 9
     * ASP.NET Core MVC
     * Entity Framework Core
     * [**SQL Server**]
